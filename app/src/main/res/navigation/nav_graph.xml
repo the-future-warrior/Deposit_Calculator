@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mr_17.deposit_calculator.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_recurringDepositFragment"
+            app:destination="@id/recurringDepositFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fixedDepositFragment"
+            app:destination="@id/fixedDepositFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recurringDepositFragment"
+        android:name="com.mr_17.deposit_calculator.RecurringDepositFragment"
+        android:label="fragment_recurring_deposit"
+        tools:layout="@layout/fragment_recurring_deposit" />
+    <fragment
+        android:id="@+id/fixedDepositFragment"
+        android:name="com.mr_17.deposit_calculator.FixedDepositFragment"
+        android:label="fragment_fixed_deposit"
+        tools:layout="@layout/fragment_fixed_deposit" />
+</navigation>
