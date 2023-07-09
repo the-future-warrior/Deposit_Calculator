@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -55,4 +56,9 @@ dependencies {
     // material design
     def material_design_version = "1.9.0"
     implementation "com.google.android.material:material:$material_design_version"
+
+    // firebase
+    implementation platform('com.google.firebase:firebase-bom:32.1.1')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation "com.google.firebase:firebase-firestore-ktx"
 }

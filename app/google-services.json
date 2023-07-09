@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "468938186142",
+    "project_id": "the-deposit-calculator",
+    "storage_bucket": "the-deposit-calculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468938186142:android:5a9f64298e4eb4e4a0ca8f",
+        "android_client_info": {
+          "package_name": "com.mr_17.deposit_calculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468938186142-nigtjelfa71r765cdnu0u50n9jmpt3ot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChCHqLIledJTMgLGW0qIInCb8TVhmEUbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468938186142-nigtjelfa71r765cdnu0u50n9jmpt3ot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
