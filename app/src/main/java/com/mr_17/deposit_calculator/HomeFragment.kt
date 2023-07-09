@@ -15,6 +15,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeBinding.bind(view)
 
+        (activity as MainActivity).setToolbarTitle(getString(R.string.app_name))
+
         binding.apply {
             btnFixedDeposit.apply {
                 txtTitle.text = getString(R.string.fixed_deposit)
