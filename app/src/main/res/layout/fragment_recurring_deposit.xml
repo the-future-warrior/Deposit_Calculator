@@ -7,35 +7,15 @@
     tools:context=".RecurringDepositFragment">
 
     <include
-        android:id="@+id/tvTitleDepositScheme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        layout="@layout/layout_label_input_text_field"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dropdownMenuDepositScheme"
+        android:id="@+id/dropdownDepositScheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        layout="@layout/layout_dropdown"
         android:layout_marginHorizontal="10dp"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleDepositScheme"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <AutoCompleteTextView
-            android:id="@+id/autoComplete"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="15dp"
-            android:inputType="none"
-            android:textSize="18sp"
-            android:fontFamily="@font/passion_one"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <include
         android:id="@+id/et_amount"
@@ -46,7 +26,7 @@
         android:layout_marginHorizontal="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dropdownMenuDepositScheme"/>
+        app:layout_constraintTop_toBottomOf="@id/dropdownDepositScheme"/>
 
     <include
         android:id="@+id/et_year"

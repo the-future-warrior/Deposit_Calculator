@@ -4,15 +4,13 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.InputType
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import com.mr_17.deposit_calculator.databinding.FragmentRecurringDepositBinding
 
 class RecurringDepositFragment : Fragment(R.layout.fragment_recurring_deposit) {
-    lateinit var binding: FragmentRecurringDepositBinding
+    private lateinit var binding: FragmentRecurringDepositBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,15 +23,17 @@ class RecurringDepositFragment : Fragment(R.layout.fragment_recurring_deposit) {
 
     private fun initializeUI() {
         binding.apply {
-            tvTitleDepositScheme.heading.text = "Deposit Scheme"
+            dropdownDepositScheme.apply{
+                tvLabel.heading.text = "Deposit Scheme"
 
-            val items = resources.getStringArray(R.array.list_items_deposit_scheme)
-            val adapter = ArrayAdapter(requireContext(), R.layout.list_item_deposit_scheme, items)
-            (dropdownMenuDepositScheme.editText as? AutoCompleteTextView)?.apply {
-                setText(items[0])
-                setAdapter(adapter)
+                val items = resources.getStringArray(R.array.list_items_deposit_scheme)
+                val adapter =
+                    ArrayAdapter(requireContext(), R.layout.item_dropdown_menu, items)
+                (dropdown.editText as? AutoCompleteTextView)?.apply {
+                    setText(items[0])
+                    setAdapter(adapter)
+                }
             }
-
             etAmount.apply {
                 tvLabel.heading.text = "Amount"
                 inputTextField.editText?.apply {
@@ -55,7 +55,6 @@ class RecurringDepositFragment : Fragment(R.layout.fragment_recurring_deposit) {
                     inputType = InputType.TYPE_CLASS_NUMBER
                 }
             }
-
             btnCalculate.apply {
                 button.text = "Calculate"
             }

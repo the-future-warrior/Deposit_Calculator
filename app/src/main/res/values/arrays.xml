@@ -4,4 +4,10 @@
         <item>General</item>
         <item>Senior Citizen</item>
     </string-array>
+
+    <string-array name="list_items_interest_payment">
+        <item>Maturity</item>
+        <item>Quarterly</item>
+        <item>Monthly</item>
+    </string-array>
 </resources>
